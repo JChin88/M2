@@ -5,8 +5,8 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  modified string 
  *
- * @author Bob
- * @version 1.1
+ * @author Henry
+ * @version 1.2
  */
 public class Person2 {
     /** Holds the persons real name */
@@ -31,9 +31,14 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-		char[] tempCharArray = new char[input.length()];
-		System.out.println("Hello World!!!");
-	  return null;
+		String tempInput = "";
+		while (input.length() > 0) {
+			int randomNum = (int)(Math.random() * (input.length()-1));
+			tempInput += input.substring(randomNum, randomNum+1);
+			input = input.substring(0,randomNum) + input.substring(randomNum+1);
+		}
+
+	  return tempInput;
 	}
 	/**
 	 * Return a string rep of this object
