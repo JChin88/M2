@@ -4,8 +4,8 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  reversed string 
  *  
- *  @author  Bob
- *  @version 1.1
+ *  @author  Matthew
+ *  @version 1.2
  */
 public class Person3 {
    /** Holds the persons real name */  
@@ -43,6 +43,11 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	  return null;
+		String flip = "";
+
+		for (int i = input.length() - 1; i >= 0; i--) {
+			flip = flip + input.charAt(i);
+		}
+		return flip;
 	}
 }
