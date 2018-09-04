@@ -31,9 +31,14 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-		char[] tempCharArray = new char[input.length()];
-		System.out.println("Hello World!!!!!!!");
-	  return null;
+		String tempInput = "";
+		while (input.length() > 0) {
+			int randomNum = (int)(Math.random() * (input.length()-1));
+			tempInput += input.substring(randomNum, randomNum+1);
+			input = input.substring(0,randomNum) + input.substring(randomNum+1);
+		}
+
+	  return tempInput;
 	}
 	/**
 	 * Return a string rep of this object
