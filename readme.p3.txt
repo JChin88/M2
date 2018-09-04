@@ -1,2 +1,2 @@
-Matthew Orubina
-morubina3@gatech.edu
+Hoa V Luu
+hluu@gatech.edu
