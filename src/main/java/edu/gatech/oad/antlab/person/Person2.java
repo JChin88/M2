@@ -5,8 +5,8 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  modified string 
  *
- * @author Bob
- * @version 1.1
+ * @author Henry
+ * @version 1.2
  */
 public class Person2 {
     /** Holds the persons real name */
@@ -32,7 +32,7 @@ public class Person2 {
 	private String calc(String input) {
 	  //Person 2 put your implementation here
 		char[] tempCharArray = new char[input.length()];
-		System.out.println("Hello World!!!");
+		System.out.println("Hello World!!!!!!!");
 	  return null;
 	}
 	/**
