@@ -3,13 +3,24 @@ defaultTasks 'jar'
 apply plugin: 'java'
 
 dependencies {
-    _____________
+    compile files('/lib/resources.jar')
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+    testCompile group: 'junit', name: 'junit', version: '4+'
 }
 
 jar {
     manifest {
-        attributes("Implementation-Title": "",
-                "Main-Class": "edu.gatech.oad.antlab",
-                "Implementation-Version": "")
+        attributes("Main-Class" : 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                "Class-Path" : 'lib/resources.jar')
+        destinationDir = file('.')
+        archiveName = 'AntLabMain.jar'
     }
+}
+
+clean {
+    delete 'AntLabMain.jar'
+}
+
+repositories {
+    mavenCentral()
 }
